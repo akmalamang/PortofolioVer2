@@ -9,67 +9,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
-        section {
-            padding-top: 128px;
+        .about-exp-item {
+            margin-top: 32px;
         }
         
-        .navbar {
-            background-color: white;
-            box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
+        .about-exp-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         
-        .home h1 {
-            font-size: 72px;
+        section::before {
+            z-index: -1;
+            content: '';
+            font-size: 67px;
+            color: rgb(0, 0, 0);
+            opacity: 0.25;
+            position: absolute;
+            top: 15px;
+            left: -26px;
+            font-weight: bold;
         }
         
-        .home h3 {
-            font-size: 48px;
+        .about::before {
+            content: 'About';
         }
         
-        .btn.hover {
-            transition: .3s;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-        }
-        
-        .btn.hover:hover {
-            background-color: black;
-            box-shadow: 0px 3px 2px rgba(0, 0, 0, .24);
-            transform: translateY(-3px);
-            color: white;
-        }
-        
-        .btn.hover:active {
-            background-color: white;
-            color: black;
-        }
-        
-        .btn.hover:checked {
-            background-color: white;
-            color: black;
-        }
-        
-        .home .arrow img {
-            width: 50px;
-        }
-        
-        #arrow {
-            animation: upDown 1s infinite;
-        }
-        
-        @keyframes upDown {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+        .about-exp-item-detail {
+            display: none;
         }
     </style>
 </head>
@@ -109,10 +76,10 @@
                 <h3 class="fw-semibold">Hi ' I am</h3>
                 <h1 class="fw-bold">Akmal Maulana</h1>
                 <p class="">I am frontEnd Developer based Indonesia</p>
-                <a class="btn hover " href="/images/potrait.png" download="">Resume</a>
+                <a class="btn hover " href="/images/akmalpp.png" download="">Resume</a>
             </div>
             <div class="col-4">
-                <img src="/images/potrait.png" alt="">
+                <img src="/images/akmalpp.png" alt="">
             </div>
         </div>
         <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
@@ -121,8 +88,52 @@
 
         </div>
     </section>
-
     <!--LAST HOME-->
+
+    <!--ABOUT-->
+    <section id="section" class="about container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sequi quasi est corporis nam unde quod maxime corrupti, itaque eos dolorum possimus? Facilis harum, minus voluptates quos aliquid commodi reprehenderit eos, autem nihil numquam laudantium!
+            Quibusdam sunt, at ratione officia a commodi perferendis qui. Eligendi commodi ea impedit molestiae odio.</p>
+        <div class="about-exp">
+            <div class="about-exp-item">
+                <div class="about-exp-header">
+                    <div>
+                        <h5>frontEnd Developer</h5>
+                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                    </div>
+                    <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
+                </div>
+                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
+                    voluptatem!
+                </p>
+            </div>
+            <div class="about-exp-item">
+                <div class="about-exp-header">
+                    <div>
+                        <h5>frontEnd Developer</h5>
+                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                    </div>
+                    <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
+                </div>
+                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
+                    voluptatem!
+                </p>
+            </div>
+            <div class="about-exp-item">
+                <div class="about-exp-header">
+                    <div>
+                        <h5>frontEnd Developer</h5>
+                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                    </div>
+                    <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
+                </div>
+                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
+                    voluptatem!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--LAST ABOUT-->
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
