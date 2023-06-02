@@ -9,70 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
-        #work {
-            margin-top: 1em;
+        #contact::before {
+            content: 'Contact';
         }
         
-        .work::before {
-            content: 'Work';
+        .contact_form {
+            border: 1px solid black;
+            padding: 4em 2em;
+            border-radius: 10px;
         }
         
-        .work-img img {
-            width: 100%;
-        }
-        /* .work-img img:hover {
-            filter: grayscale(3);
-        } */
-        
-        .work-img {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: 'satu dua' 'tiga tiga';
-            gap: .5em;
+        .contact {
+            padding-bottom: 128px;
         }
         
-        #satu {
-            grid-area: satu;
+        .form-label {
+            font-weight: 700;
         }
         
-        #dua {
-            grid-area: dua;
-        }
-        
-        #tiga {
-            grid-area: tiga;
-        }
-        
-        #satu:hover::after {
-            content: 'Web Project';
-        }
-        
-        #dua:hover::after {
-            content: 'Project web mobile';
-        }
-        
-        #tiga:hover::after {
-            content: 'Web Development';
-        }
-        
-        .work-img-item {
-            position: relative;
-            transition: 0.5s;
-        }
-        
-        .work-img-item:hover::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 25px;
-            text-align: center;
-            line-height: 250px;
-            transition: 0.3s;
+        .txt {
+            font-weight: 600;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -88,16 +45,16 @@
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Work</a>
+                        <a class="nav-link" href="#work">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -119,7 +76,7 @@
             </div>
         </div>
         <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
-            <a href="#about" class="text-decoration-none  text-dark">more info</a>
+            <a href="#about" class="text-decoration-none  text-dark">More Info</a>
             <img id="arrow" class="mt-2" src="/images/arrow.svg" alt="arrow icons">
 
         </div>
@@ -127,7 +84,7 @@
     <!--LAST HOME-->
 
     <!--ABOUT-->
-    <section id="section" class="about container">
+    <section id="about" class="about container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sequi quasi est corporis nam unde quod maxime corrupti, itaque eos dolorum possimus? Facilis harum, minus voluptates quos aliquid commodi reprehenderit eos, autem nihil numquam laudantium!
             Quibusdam sunt, at ratione officia a commodi perferendis qui. Eligendi commodi ea impedit molestiae odio.</p>
         <div class="about-exp">
@@ -192,6 +149,49 @@
         </div>
     </section>
     <!--LAST WORK-->
+
+    <!--CONTACT-->
+    <section id="contact" class="contact container">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, neque!</p>
+                <div class="row">
+                    <div class="col">
+                        <img src="/images/Facebook.svg" alt="facebook icon">
+                        <p class="txt">Akmal Maulana</p>
+                    </div>
+                    <div class="col">
+                        <img src="/images/Instagram.svg" alt="instagram icon">
+                        <p class="txt">@akmalamang</p>
+                    </div>
+                    <div class="col">
+                        <img src="/images/Twitter.svg" alt="tweeter icon">
+                        <p class="txt">@Aamangg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form class="contact_form " onsubmit="onFormSubmit(event)">
+                    <div class="mb-3">
+                        <label for="inp_email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="inp_email" placeholder="example email@123.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inp_subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="inp_subject" placeholder="example #Akmal">
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="inp_message" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="inp_message" placeholder="example saya tertarik">
+                    </div>
+                    <div class="d-flex justify-content-center ">
+                        <button type="submit" class="btn hover mt-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--LAST CONTACT-->
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
