@@ -9,34 +9,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
-        .about-exp-item {
-            margin-top: 32px;
+        #work {
+            margin-top: 1em;
         }
         
-        .about-exp-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .work::before {
+            content: 'Work';
         }
         
-        section::before {
-            z-index: -1;
+        .work-img img {
+            width: 100%;
+        }
+        /* .work-img img:hover {
+            filter: grayscale(3);
+        } */
+        
+        .work-img {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 'satu dua' 'tiga tiga';
+            gap: .5em;
+        }
+        
+        #satu {
+            grid-area: satu;
+        }
+        
+        #dua {
+            grid-area: dua;
+        }
+        
+        #tiga {
+            grid-area: tiga;
+        }
+        
+        #satu:hover::after {
+            content: 'Web Project';
+        }
+        
+        #dua:hover::after {
+            content: 'Project web mobile';
+        }
+        
+        #tiga:hover::after {
+            content: 'Web Development';
+        }
+        
+        .work-img-item {
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .work-img-item:hover::after {
             content: '';
-            font-size: 67px;
-            color: rgb(0, 0, 0);
-            opacity: 0.25;
             position: absolute;
-            top: 15px;
-            left: -26px;
-            font-weight: bold;
-        }
-        
-        .about::before {
-            content: 'About';
-        }
-        
-        .about-exp-item-detail {
-            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            line-height: 250px;
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -134,6 +170,28 @@
         </div>
     </section>
     <!--LAST ABOUT-->
+
+    <!--WORK-->
+    <section id="work" class="work container">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quae possimus delectus placeat corporis doloribus repellat perferendis unde fugiat eaque!</p>
+            </div>
+            <div class="col work-img">
+                <div class=" work-img-item" id="satu">
+                    <img src="/images/work-1.png" alt="wokk-1">
+                </div>
+                <div class=" work-img-item" id="dua">
+                    <img src="/images/work-2.png" alt="work-2">
+                </div>
+                <div class=" work-img-item" id="tiga">
+                    <img src="/images/work-3.png" alt="work-3">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--LAST WORK-->
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
