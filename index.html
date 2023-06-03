@@ -8,6 +8,54 @@
     <title>Portofolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media screen and (max-width:750px) {
+            #home .profil-img {
+                margin: auto;
+                width: 70%;
+                display: block;
+            }
+            #home .fw-semibold {
+                font-size: 35px;
+                text-align: center;
+                margin-top: .5em;
+            }
+            #home .fw-bold {
+                font-size: 3rem;
+                text-align: center;
+            }
+            #home .home-text {
+                text-align: center;
+            }
+            .btn {
+                text-align: center;
+                display: block;
+            }
+            .about::before {
+                content: 'About';
+                left: .2em;
+                font-size: 50px;
+                top: 1em;
+            }
+            .work::before {
+                content: 'Work';
+                left: .2em;
+                font-size: 50px;
+                top: 1em;
+            }
+            #contact::before {
+                content: 'Contact';
+                left: .2em;
+                font-size: 50px;
+                top: 1em;
+            }
+            .txt {
+                font-weight: 600;
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,22 +88,21 @@
 
     <!--HOME-->
     <section id="home" class="home container">
-        <div class="row d-flex align-items-center">
-            <div class="col-8">
+        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
+            <div class="col-12 col-md-8">
                 <h3 class="fw-semibold">Hi ' I am</h3>
                 <h1 class="fw-bold">Akmal Maulana</h1>
-                <p class="">I am frontEnd Developer based Indonesia</p>
+                <p class="home-text">I am frontEnd Developer based Indonesia</p>
                 <a class="btn hover " href="/images/akmalpp.png" download="">Resume</a>
             </div>
-            <div class="col-4">
-                <img src="/images/akmalpp.png" alt="">
+            <div class="col-12 col-md-4">
+                <img src="/images/akmalpp.png" alt="" class="profil-img">
             </div>
         </div>
-        <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
-            <a href="#about" class="text-decoration-none  text-dark">More Info</a>
+        <a class="arrow text-decoration-none  w-100 d-flex align-items-center flex-column mt-5" href="#about">
+            <div class=" text-dark">More Info</div>
             <img id="arrow" class="mt-2" src="/images/arrow.svg" alt="arrow icons">
-
-        </div>
+        </a>
     </section>
     <!--LAST HOME-->
 
@@ -106,19 +153,19 @@
 
     <!--WORK-->
     <section id="work" class="work container">
-        <div class="row d-flex align-items-center gap-5">
+        <div class="row d-flex align-items-center flex-column gap-2 flex-md-row gap-md-5">
             <div class="col">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quae possimus delectus placeat corporis doloribus repellat perferendis unde fugiat eaque!</p>
             </div>
             <div class="col work-img">
                 <div class=" work-img-item" id="satu">
-                    <img src="/images/work-1.png" alt="wokk-1">
+                    <img src="/images/work-1.png" alt="wokk-1" class="rounded-3">
                 </div>
                 <div class=" work-img-item" id="dua">
-                    <img src="/images/work-2.png" alt="work-2">
+                    <img src="/images/work-2.png" alt="work-2" class="rounded-3">
                 </div>
                 <div class=" work-img-item" id="tiga">
-                    <img src="/images/work-3.png" alt="work-3">
+                    <img src="/images/work-3.png" alt="work-3" class="rounded-3">
                 </div>
 
             </div>
@@ -129,24 +176,24 @@
     <!--CONTACT-->
     <section id="contact" class="contact container">
         <div class="row d-flex align-items-center gap-5">
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, neque!</p>
-                <div class="row">
-                    <div class="col">
-                        <img src="/images/Facebook.svg" alt="facebook icon">
+                <div class="row ">
+                    <div class="col d-flex align-items-center gap-1 align-self-center">
+                        <img src="/images/Facebook.svg" alt="facebook icon" class="w-25">
                         <p class="txt">Akmal Maulana</p>
                     </div>
-                    <div class="col">
-                        <img src="/images/Instagram.svg" alt="instagram icon">
+                    <div class="col d-flex align-items-center gap-1">
+                        <img src="/images/Instagram.svg" alt="instagram icon" class="w-25">
                         <p class="txt">@akmalamang</p>
                     </div>
-                    <div class="col">
-                        <img src="/images/Twitter.svg" alt="tweeter icon">
+                    <div class="col d-flex align-items-center gap-1">
+                        <img src="/images/Twitter.svg" alt="tweeter icon" class="w-25">
                         <p class="txt">@Aamangg</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-5 ">
                 <form class="contact_form " onsubmit="onFormSubmit(event)">
                     <div class="mb-3">
                         <label for="inp_email" class="form-label">Email address</label>
