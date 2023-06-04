@@ -10,50 +10,16 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        @media screen and (max-width:750px) {
-            #home .profil-img {
-                margin: auto;
-                width: 70%;
-                display: block;
-            }
-            #home .fw-semibold {
-                font-size: 35px;
-                text-align: center;
-                margin-top: .5em;
-            }
-            #home .fw-bold {
-                font-size: 3rem;
-                text-align: center;
-            }
-            #home .home-text {
-                text-align: center;
-            }
-            .btn {
-                text-align: center;
-                display: block;
-            }
-            .about::before {
-                content: 'About';
-                left: .2em;
-                font-size: 50px;
-                top: 1em;
-            }
-            .work::before {
-                content: 'Work';
-                left: .2em;
-                font-size: 50px;
-                top: 1em;
-            }
-            #contact::before {
-                content: 'Contact';
-                left: .2em;
-                font-size: 50px;
-                top: 1em;
-            }
-            .txt {
-                font-weight: 600;
-                font-size: 10px;
-            }
+        .btn {
+            animation: roll-in-left 0.6s ease-out both;
+        }
+        
+        .skill::before {
+            content: 'Skill';
+        }
+        
+        .both {
+            animation: rightIn 1s both;
         }
     </style>
 </head>
@@ -62,23 +28,23 @@
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand fs-3 fw-bold" href="#">Akmal</a>
+            <a class="navbar-brand fs-3 fw-bold text-white" href="#">Akmal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link text-white" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#work">Work</a>
+                        <a class="nav-link text-white" href="#work">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link text-white" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -87,11 +53,12 @@
     <!--LAST NAVBAR-->
 
     <!--HOME-->
-    <section id="home" class="home container">
+    <section id="home" class="home container position-relative">
+        <span class="ilus"></span>
         <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
             <div class="col-12 col-md-8">
                 <h3 class="fw-semibold">Hi ' I am</h3>
-                <h1 class="fw-bold">Akmal Maulana</h1>
+                <h1 class="fw-bold nama-profil">Akmal Maulana</h1>
                 <p class="home-text">I am frontEnd Developer based Indonesia</p>
                 <a class="btn hover " href="/images/akmalpp.png" download="">Resume</a>
             </div>
@@ -114,8 +81,8 @@
             <div class="about-exp-item">
                 <div class="about-exp-header">
                     <div>
-                        <h5>frontEnd Developer</h5>
-                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                        <h5>FrontEnd Developer</h5>
+                        <p>Freelancer FrontEnd Devs (2022 - Now)</p>
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
@@ -126,8 +93,8 @@
             <div class="about-exp-item">
                 <div class="about-exp-header">
                     <div>
-                        <h5>frontEnd Developer</h5>
-                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                        <h5>Operator Produksi</h5>
+                        <p>PT Ultra Sakti (2021 - Now)</p>
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
@@ -138,8 +105,8 @@
             <div class="about-exp-item">
                 <div class="about-exp-header">
                     <div>
-                        <h5>frontEnd Developer</h5>
-                        <p>Coder FrontEnd Devs (2022 - Now)</p>
+                        <h5>Operator Produksi</h5>
+                        <p>PT Rudi Soetadi (Sep 2020 - Des 2020)</p>
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
@@ -173,11 +140,33 @@
     </section>
     <!--LAST WORK-->
 
+    <!--Skill-->
+    <section id="skill" class="skill container">
+        <div class="row justify-content-between mt-3">
+            <div class="col-2 both">
+                <img src="/images/html-5.png" width="80" alt="">
+            </div>
+            <div class="col-2 both">
+                <img src="/images/css-3.png" width="80" alt="">
+            </div>
+            <div class="col-2 both">
+                <img src="/images/js.png" width="80" alt="">
+            </div>
+            <div class="col-2 both">
+                <img src="/images/icons8-bootstrap-48.png" width="80" alt="">
+            </div>
+            <div class="col-2 both">
+                <img src="/images/tailwind-css.svg" width="80" alt="">
+            </div>
+        </div>
+    </section>
+    <!--LAST SKILL-->
+
     <!--CONTACT-->
     <section id="contact" class="contact container">
         <div class="row d-flex align-items-center gap-5">
             <div class="col-12 col-lg-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, neque!</p>
+                <p>Yuk mari berteman dengan saya di social media, agar saling mengenal</p>
                 <div class="row ">
                     <div class="col d-flex align-items-center gap-1 align-self-center">
                         <img src="/images/Facebook.svg" alt="facebook icon" class="w-25">
@@ -215,6 +204,17 @@
         </div>
     </section>
     <!--LAST CONTACT-->
+
+    <!--FOOTER-->
+    <div class="footer">
+        <footer id="footer" class="container">
+            <div class="fot-text d-flex justify-content-center">
+                <p class="txt mt-2 text-dark">Created By AkmalM</p>
+            </div>
+        </footer>
+    </div>
+
+    <!--AKHIR FOOTER-->
 
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

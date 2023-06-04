@@ -4,7 +4,7 @@ section {
 }
 
 .navbar {
-  background-color: white;
+  background-color: #579bb1;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
@@ -19,6 +19,9 @@ section {
   font-size: 48px;
 }
 
+.nama-profil {
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
 .btn.hover {
   transition: 0.3s;
   background-color: white;
@@ -173,6 +176,10 @@ section::before {
   width: 100%;
 }
 
+.footer {
+  background-color: #e1d7c6;
+}
+
 @keyframes upDown {
   0% {
     transform: translateY(0);
@@ -182,5 +189,159 @@ section::before {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.ilus {
+  width: 300px;
+  height: 250px;
+  background-color: #e1d7c6;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  border-radius: 500%;
+}
+
+.profil-img {
+  animation: rightIn 1s both;
+}
+
+@keyframes rightIn {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home .profil-img {
+    margin: auto;
+    width: 70%;
+    display: block;
+  }
+  #home .fw-semibold {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0.5em;
+  }
+  #home .fw-bold {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #home .home-text {
+    text-align: center;
+  }
+  .btn {
+    text-align: center;
+    display: block;
+  }
+  .about::before {
+    content: 'About';
+    left: 0.2em;
+    font-size: 50px;
+    top: 1em;
+  }
+  .work::before {
+    content: 'Work';
+    left: 0.2em;
+    font-size: 50px;
+    top: 1em;
+  }
+  #contact::before {
+    content: 'Contact';
+    left: 0.2em;
+    font-size: 50px;
+    top: 1em;
+  }
+  .txt {
+    font-weight: 600;
+    font-size: 10px;
+  }
+  .ilus {
+    display: none;
+  }
+  #skill img {
+    width: 40px;
+  }
+  #skill::before {
+    content: 'Skill';
+    left: 0.2em;
+    font-size: 50px;
+    top: 1em;
   }
 }
