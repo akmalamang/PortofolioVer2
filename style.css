@@ -222,6 +222,18 @@ section::before {
   animation: rightIn 1s both;
 }
 
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @keyframes rightIn {
   0% {
     -webkit-transform: translateY(-500px);

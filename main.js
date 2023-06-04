@@ -32,3 +32,21 @@ function onFormSubmit(e) {
     $(message).val('');
   }
 }
+
+function reveal() {
+  var reveals = $('.reveal');
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = $(window).height();
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      $(reveals[i]).addClass('active');
+    } else {
+      $(reveals[i]).removeClass('active');
+    }
+  }
+}
+
+$(window).on('scroll', reveal);
