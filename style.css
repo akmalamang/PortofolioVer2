@@ -192,6 +192,18 @@ section::before {
   }
 }
 
+@keyframes upTo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes tracking-in-contract {
   0% {
     letter-spacing: 0.5em;
