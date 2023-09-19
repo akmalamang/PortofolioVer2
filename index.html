@@ -6,36 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bot.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .btn {
-            animation: roll-in-left 0.6s ease-out both;
-        }
-        
-        .both img {
-            transition: .5s;
-        }
-        
-        .both img:hover {
-            transform: translateY(-10px);
-        }
-        
-        .skill::before {
-            content: 'Skill';
-        }
-        
-        .both {
-            animation: rightIn 1s both;
-        }
-    </style>
 </head>
 
 <body>
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
             <a class="navbar-brand fs-3 fw-bold text-white" href="#">Akmal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -83,8 +62,8 @@
 
     <!--ABOUT-->
     <section id="about" class="about container reveal">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sequi quasi est corporis nam unde quod maxime corrupti, itaque eos dolorum possimus? Facilis harum, minus voluptates quos aliquid commodi reprehenderit eos, autem nihil numquam laudantium!
-            Quibusdam sunt, at ratione officia a commodi perferendis qui. Eligendi commodi ea impedit molestiae odio.</p>
+        <p>Assalamualaikum! Saya Akmal Maulana, dan saya senang Anda berkunjung ke halaman 'About' saya. Saya adalah Seorang Freelance FrontEnd Developer dengan 1 tahun pengalaman di bidang ini. Saya percaya bahwa Konsisten, Semangat yang tinggi dan tidak
+            menyerah adalah kunci keberhasilan dalam hidup, dan saya berusaha untuk menerapkan nilai-nilai ini dalam setiap aspek kehidupan saya.</p>
         <div class="about-exp">
             <div class="about-exp-item">
                 <div class="about-exp-header">
@@ -94,8 +73,8 @@
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
-                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
-                    voluptatem!
+                <p class="about-exp-item-detail ">
+                    Saya Bekerja sebagai freelance FrontEnd developer sudah dari 2022 sampai sekarang, client saya dalam 1 tahun belum pernah lebih dari 10. saya mengerjakan project hanya seperti landing page web, cv , website toko, blog spot, dan project kecil lainnya.
                 </p>
             </div>
             <div class="about-exp-item">
@@ -106,8 +85,9 @@
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
-                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
-                    voluptatem!
+                <p class="about-exp-item-detail ">
+                    Saya Bekerja sebagai seorang operator produksi disebuah perusahaan farmasi yaitu PT Ultra Sakti, yang berlokasi di Bekasi, Bantar Gebang. Deskripsi pekerjaan saya, melakukan pengoperasian mesin-mesin Premix untuk pembuatan sebuah bahan campuran, untuk
+                    produk Madu Tj.
                 </p>
             </div>
             <div class="about-exp-item">
@@ -118,8 +98,8 @@
                     </div>
                     <button class="btn hover" onclick="toogleDetail(event)">More Info</button>
                 </div>
-                <p class="about-exp-item-detail ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid dignissimos doloribus fugit sequi illum ex obcaecati aut placeat eaque veritatis molestias voluptatibus adipisci commodi repellendus nostrum exercitationem. Animi,
-                    voluptatem!
+                <p class="about-exp-item-detail ">
+                    Ini adalah sebuah pengalaman Kerja saya. yaitu di sebuah perusahaan farmasi yang bernama PT Rudy Soetadi. Perusahaan ini memproduksi produk produk kosmetik seperti bedak,minyak wangi, marina , dan masih banyak lagi.
                 </p>
             </div>
         </div>
@@ -129,8 +109,8 @@
     <!--WORK-->
     <section id="work" class="work container reveal">
         <div class="row d-flex align-items-center flex-column gap-2 flex-md-row gap-md-5">
-            <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quae possimus delectus placeat corporis doloribus repellat perferendis unde fugiat eaque!</p>
+            <div class="xp col">
+                <p>ini beberapa Foto saya saat bekerja sebagai seorang Freelance FrontEnd Developer, foto ini di ambil dari <a href="https://unsplash.com/">Unsplash.com</a> gambar hanyalah sebagai hiasan dalam web saya.</p>
             </div>
             <div class="col work-img">
                 <div class=" work-img-item" id="satu">
@@ -176,17 +156,18 @@
             <div class="col-12 col-lg-6">
                 <p>Yuk mari berteman dengan saya di social media, agar saling mengenal</p>
                 <div class="row ">
-                    <div class="col d-flex align-items-center gap-1 align-self-center">
+                    <div class="gmbr col d-flex align-items-center gap-1 align-self-center">
                         <img src="./images/Facebook.svg" alt="facebook icon" class="w-25">
-                        <p class="txt">Akmal Maulana</p>
+                        <p class="txt"><a href="https://facebook.com/Akmal Maulana" target="_blank" style="text-decoration: none; color: black;">Akmal Maulana</a></p>
                     </div>
-                    <div class="col d-flex align-items-center gap-1">
+                    <div class="gmbr col d-flex align-items-center gap-1">
                         <img src="./images/Instagram.svg" alt="instagram icon" class="w-25">
-                        <p class="txt">@akmalamang</p>
+                        <p class="txt"><a href="https://instagram.com/akmlamang" target="_blank" style="text-decoration: none; color: black;">@akmalamang</a> </p>
                     </div>
-                    <div class="col d-flex align-items-center gap-1">
+                    <div class="gmbr col d-flex align-items-center gap-1">
                         <img src="./images/Twitter.svg" alt="tweeter icon" class="w-25">
-                        <p class="txt">@Aamangg</p>
+                        <p class="txt">
+                            <a href="https://Twitter.com/@Aamangg" style="text-decoration: none; color: black;" target="_blank"></a> @Aamangg</p>
                     </div>
                 </div>
             </div>

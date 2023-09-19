@@ -180,6 +180,30 @@ section::before {
   background-color: #e1d7c6;
 }
 
+.btn {
+  animation: roll-in-left 0.6s ease-out both;
+}
+
+.both img {
+  transition: 0.5s;
+}
+
+.both img:hover {
+  transform: translateY(-10px);
+}
+
+.skill::before {
+  content: 'Skill';
+}
+
+.both {
+  animation: rightIn 1s both;
+}
+
+.gmbr:hover {
+  cursor: pointer;
+}
+
 @keyframes upDown {
   0% {
     transform: translateY(0);
@@ -368,4 +392,9 @@ section::before {
     font-size: 50px;
     top: 1em;
   }
+}
+
+.xp p a {
+  text-decoration: none;
+  color: blue;
 }
